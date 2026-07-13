@@ -3,50 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NOVAA — Datenschutz</title>
+<title>NOVAA — Datenschutz / Privacy</title>
 <style>
   body{margin:0;font-family:-apple-system,system-ui,sans-serif;color:#2a1e1b;
     background:#fcf1e9;line-height:1.65}
-  main{max-width:720px;margin:0 auto;padding:6vh 24px 10vh}
+  main{max-width:720px;margin:0 auto;padding:5vh 24px 10vh}
   a{color:#d8694f}
   h1{font-family:Georgia,serif;font-weight:300;font-size:34px}
   h2{font-family:Georgia,serif;font-weight:400;font-size:20px;margin-top:1.8em}
   .muted{color:#8c7269;font-size:14px}
   .back{color:#8c7269;text-decoration:none}
+  .lang{display:flex;gap:8px;margin-bottom:2.4em}
+  .lang button{border:1px solid #8c7269;background:transparent;color:#8c7269;
+    border-radius:20px;padding:4px 14px;font-size:13px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:#2a1e1b;color:#fcf1e9;border-color:#2a1e1b}
+  [data-lang]{display:none}
+  [data-lang].on{display:block}
 </style>
 </head>
 <body>
 <main>
   <a class="back" href="index.html">← NOVAA</a>
-  <h1>Datenschutzerklärung</h1>
-  <p class="muted">Stand: 2026 · Nutzung ab 18 Jahren.</p>
+  <div class="lang">
+    <button data-set="de">DE</button>
+    <button data-set="en">EN</button>
+  </div>
 
-  <p><strong>Verantwortlicher &amp; Kontakt:</strong> NOVAA · <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+  <div data-lang="de">
+    <h1>Datenschutzerklärung</h1>
+    <p class="muted">Stand: 2026 · Nutzung ab 18 Jahren.</p>
+    <p><strong>Verantwortlicher &amp; Kontakt:</strong> NOVAA · <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    <h2>Welche Daten wir verarbeiten</h2>
+    <p>Kontodaten über „Sign in with Apple" (anonymisierte Apple-ID, optional Name/E-Mail bzw.
+    Apple-Relay-Mail). Profilangaben: Vorname, Geburtsjahr, Geschlecht, Stadt (nur Gemeinde-Ebene),
+    ungefähre Koordinaten zur Distanzberechnung, Größe, Fotos, Interessen, Werte, Sprachen sowie
+    <strong>besondere Kategorien</strong> (Ethnie, Religion, sexuelle Orientierung) — nur, wenn du sie
+    freiwillig angibst; ausdrückliche Einwilligung nach Art. 9 DSGVO. Außerdem Chat-Inhalte sowie
+    Vorschlags- und Match-Daten.</p>
+    <h2>Zweck &amp; Rechtsgrundlage</h2>
+    <p>Bereitstellung der Vermittlungsfunktion (Vertrag, Art. 6 (1) b DSGVO); besondere Kategorien auf
+    Grundlage deiner Einwilligung (Art. 9 (2) a). <strong>Keine Werbung, kein Tracking, kein Verkauf
+    von Daten.</strong></p>
+    <h2>Verarbeiter</h2>
+    <p>Apple (Anmeldung) und Supabase (Hosting, Datenbank, Speicher). Fotos liegen in einem privaten
+    Speicher-Bucket; Zugriff nur über kurzlebige, signierte Links.</p>
+    <h2>Speicherdauer &amp; deine Rechte</h2>
+    <p>Wir speichern deine Daten bis zur Löschung deines Kontos. Du hast das Recht auf Auskunft,
+    Berichtigung, Löschung, Widerspruch und Datenübertragbarkeit. <strong>Du kannst dein Konto
+    jederzeit direkt in der App löschen</strong> (Konto → „Account löschen") — das entfernt Profil,
+    Fotos und Chats endgültig.</p>
+    <p class="muted">Diese Seite ist eine allgemein verständliche Zusammenfassung.</p>
+  </div>
 
-  <h2>Welche Daten wir verarbeiten</h2>
-  <p>Kontodaten über „Sign in with Apple" (anonymisierte Apple-ID, optional Name/E-Mail bzw.
-  Apple-Relay-Mail). Profilangaben: Vorname, Geburtsjahr, Geschlecht, Stadt (nur Gemeinde-Ebene),
-  ungefähre Koordinaten zur Distanzberechnung, Größe, Fotos, Interessen, Werte, Sprachen sowie
-  <strong>besondere Kategorien</strong> (Ethnie, Religion, sexuelle Orientierung) — nur, wenn du sie
-  freiwillig angibst; ausdrückliche Einwilligung nach Art. 9 DSGVO. Außerdem Chat-Inhalte sowie
-  Vorschlags- und Match-Daten.</p>
-
-  <h2>Zweck &amp; Rechtsgrundlage</h2>
-  <p>Bereitstellung der Vermittlungsfunktion (Vertrag, Art. 6 (1) b DSGVO); besondere Kategorien auf
-  Grundlage deiner Einwilligung (Art. 9 (2) a). <strong>Keine Werbung, kein Tracking, kein Verkauf
-  von Daten.</strong></p>
-
-  <h2>Verarbeiter</h2>
-  <p>Apple (Anmeldung) und Supabase (Hosting, Datenbank, Speicher). Fotos liegen in einem privaten
-  Speicher-Bucket; Zugriff nur über kurzlebige, signierte Links.</p>
-
-  <h2>Speicherdauer &amp; deine Rechte</h2>
-  <p>Wir speichern deine Daten bis zur Löschung deines Kontos. Du hast das Recht auf Auskunft,
-  Berichtigung, Löschung, Widerspruch und Datenübertragbarkeit. <strong>Du kannst dein Konto
-  jederzeit direkt in der App löschen</strong> (Konto → „Account löschen") — das entfernt Profil,
-  Fotos und Chats endgültig.</p>
-
-  <p class="muted">Diese Seite ist eine allgemein verständliche Zusammenfassung.</p>
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: 2026 · 18+ only.</p>
+    <p><strong>Controller &amp; contact:</strong> NOVAA · <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    <h2>What data we process</h2>
+    <p>Account data via “Sign in with Apple” (anonymised Apple ID, optional name/email or Apple relay
+    email). Profile data: first name, year of birth, gender, city (municipality level only), approximate
+    coordinates for distance, height, photos, interests, values, languages, and <strong>special
+    categories</strong> (ethnicity, religion, sexual orientation) — only if you choose to provide them,
+    with your explicit consent under Art. 9 GDPR. Plus chat content and suggestion/match data.</p>
+    <h2>Purpose &amp; legal basis</h2>
+    <p>To provide the matchmaking service (contract, Art. 6(1)(b) GDPR); special categories based on your
+    consent (Art. 9(2)(a)). <strong>No advertising, no tracking, no selling of data.</strong></p>
+    <h2>Processors</h2>
+    <p>Apple (sign-in) and Supabase (hosting, database, storage). Photos live in a private storage bucket;
+    access only through short-lived signed links.</p>
+    <h2>Retention &amp; your rights</h2>
+    <p>We keep your data until you delete your account. You have the right to access, rectification,
+    erasure, objection and data portability. <strong>You can delete your account directly in the app</strong>
+    (Account → “Delete account”) — this permanently removes your profile, photos and chats.</p>
+    <p class="muted">This page is a plain-language summary.</p>
+  </div>
 </main>
+<script>
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-lang]').forEach(e=>e.classList.toggle('on',e.dataset.lang===l));
+    document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
+    try{localStorage.setItem('novaa-lang',l)}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+  var saved=null; try{saved=localStorage.getItem('novaa-lang')}catch(e){}
+  setLang(saved||((navigator.language||'de').slice(0,2)==='en'?'en':'de'));
+</script>
 </body>
 </html>

@@ -9,35 +9,75 @@
   *{box-sizing:border-box}
   body{margin:0;font-family:-apple-system,system-ui,sans-serif;color:var(--ink);
     background:linear-gradient(177deg,#fcf1e9,#f8e0d6 55%,#f2d6e0);min-height:100vh}
-  main{max-width:640px;margin:0 auto;padding:12vh 24px 8vh;text-align:center}
+  main{max-width:640px;margin:0 auto;padding:9vh 24px 8vh;text-align:center}
+  .lang{display:flex;gap:8px;justify-content:center;margin-bottom:5vh}
+  .lang button{border:1px solid var(--sub);background:transparent;color:var(--sub);
+    border-radius:20px;padding:4px 14px;font-size:13px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:var(--ink);color:#fcf1e9;border-color:var(--ink)}
   .orb{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;
     background:radial-gradient(circle at 42% 36%,#f4a988,#e68e9e)}
   .wm{letter-spacing:6px;color:var(--sub);font-size:13px}
   h1{font-family:Georgia,serif;font-weight:300;font-size:40px;margin:.3em 0 .1em}
   .tag{font-family:Georgia,serif;font-size:22px;color:#c9a892;margin:0 0 1.4em}
+  h2{font-family:Georgia,serif;font-weight:300;margin-top:2em}
   p{color:var(--sub);line-height:1.6}
   .links{margin-top:2.4em;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   a{color:var(--accent);text-decoration:none;font-weight:500}
   a:hover{text-decoration:underline}
   footer{margin-top:3em;color:var(--sub);font-size:13px}
+  [data-lang]{display:none}
+  [data-lang].on{display:block}
 </style>
 </head>
 <body>
 <main>
+  <div class="lang">
+    <button data-set="de">DE</button>
+    <button data-set="en">EN</button>
+  </div>
   <div class="orb"></div>
   <div class="wm">NOVAA</div>
-  <h1>Fang neu an.</h1>
-  <div class="tag">Ehrlich. Endlich.</div>
-  <p>Kein Wischen. Keiner kauft sich vor. Nur Menschen, die wirklich passen könnten —
-     eine ehrliche Art, jemanden kennenzulernen.</p>
-  <h2 style="font-family:Georgia,serif;font-weight:300;margin-top:2em">Support</h2>
-  <p>Fragen, Feedback oder ein Konto-Anliegen?<br>
-     Schreib uns: <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
-  <div class="links">
-    <a href="privacy.html">Datenschutz</a>
-    <a href="terms.html">Nutzungsbedingungen</a>
+
+  <div data-lang="de">
+    <h1>Fang neu an.</h1>
+    <div class="tag">Ehrlich. Endlich.</div>
+    <p>Kein Wischen. Keiner kauft sich vor. Nur Menschen, die wirklich passen könnten —
+       eine ehrliche Art, jemanden kennenzulernen.</p>
+    <h2>Support</h2>
+    <p>Fragen, Feedback oder ein Konto-Anliegen?<br>
+       Schreib uns: <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    <div class="links">
+      <a href="privacy.html">Datenschutz</a>
+      <a href="terms.html">Nutzungsbedingungen</a>
+    </div>
   </div>
+
+  <div data-lang="en">
+    <h1>Start fresh.</h1>
+    <div class="tag">Honest. At last.</div>
+    <p>No swiping. Nobody buys their way to the top. Just people who could genuinely fit —
+       an honest way to meet someone.</p>
+    <h2>Support</h2>
+    <p>Questions, feedback or an account request?<br>
+       Email us: <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+
   <footer>© 2026 NOVAA</footer>
 </main>
+<script>
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-lang]').forEach(e=>e.classList.toggle('on',e.dataset.lang===l));
+    document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
+    try{localStorage.setItem('novaa-lang',l)}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+  var saved=null; try{saved=localStorage.getItem('novaa-lang')}catch(e){}
+  setLang(saved||(navigator.language||'de').slice(0,2)==='en'?'en':'de');
+</script>
 </body>
 </html>
