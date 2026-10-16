@@ -2,82 +2,167 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NOVAA</title>
-<style>
-  :root{--ink:#2a1e1b;--sub:#8c7269;--accent:#d8694f}
-  *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,system-ui,sans-serif;color:var(--ink);
-    background:linear-gradient(177deg,#fcf1e9,#f8e0d6 55%,#f2d6e0);min-height:100vh}
-  main{max-width:640px;margin:0 auto;padding:9vh 24px 8vh;text-align:center}
-  .lang{display:flex;gap:8px;justify-content:center;margin-bottom:5vh}
-  .lang button{border:1px solid var(--sub);background:transparent;color:var(--sub);
-    border-radius:20px;padding:4px 14px;font-size:13px;cursor:pointer}
-  .lang button[aria-pressed="true"]{background:var(--ink);color:#fcf1e9;border-color:var(--ink)}
-  .orb{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;
-    background:radial-gradient(circle at 42% 36%,#f4a988,#e68e9e)}
-  .wm{letter-spacing:6px;color:var(--sub);font-size:13px}
-  h1{font-family:Georgia,serif;font-weight:300;font-size:40px;margin:.3em 0 .1em}
-  .tag{font-family:Georgia,serif;font-size:22px;color:#c9a892;margin:0 0 1.4em}
-  h2{font-family:Georgia,serif;font-weight:300;margin-top:2em}
-  p{color:var(--sub);line-height:1.6}
-  .links{margin-top:2.4em;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  a{color:var(--accent);text-decoration:none;font-weight:500}
-  a:hover{text-decoration:underline}
-  footer{margin-top:3em;color:var(--sub);font-size:13px}
-  [data-lang]{display:none}
-  [data-lang].on{display:block}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOVAA – Wein nach deinem Gaumen</title>
+<meta name="description" content="NOVAA lernt, wie du schmeckst, und führt dich zu Weinen, die zu dir sprechen. Etikett scannen, bewerten, entdecken.">
+<meta name="theme-color" content="#fcf1e9">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <div class="lang">
-    <button data-set="de">DE</button>
-    <button data-set="en">EN</button>
-  </div>
-  <div class="orb"></div>
-  <div class="wm">NOVAA</div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="orb"></span>NOVAA</div>
+    <div class="lang"><button data-set="de">DE</button><button data-set="en">EN</button></div>
+  </header>
 
+  <!-- ───────── DE ───────── -->
   <div data-lang="de">
-    <h1>Fang neu an.</h1>
-    <div class="tag">Ehrlich. Endlich.</div>
-    <p>Kein Wischen. Keiner kauft sich vor. Nur Menschen, die wirklich passen könnten —
-       eine ehrliche Art, jemanden kennenzulernen.</p>
-    <h2>Support</h2>
-    <p>Fragen, Feedback oder ein Konto-Anliegen?<br>
-       Schreib uns: <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
-    <div class="links">
-      <a href="privacy.html">Datenschutz</a>
-      <a href="terms.html">Nutzungsbedingungen</a>
+    <div class="hero">
+      <div class="orb big"></div>
+      <div class="eyebrow">Für iPhone</div>
+      <h1>Jeder Wein erzählt etwas. Finde heraus, was dich berührt.</h1>
+      <p class="lead">NOVAA lernt mit jedem Glas, wie du schmeckst – und führt dich durch die Welt der Weine zu denen, die wirklich zu dir sprechen. Mit einer ehrlichen Begründung statt Sternen von Fremden.</p>
+      <span class="store">Demnächst im App Store</span>
     </div>
+    <div class="phones">
+      <div class="phone"><img src="assets/3-gaumen.jpg" alt="Dein Gaumen-Profil" loading="lazy"></div>
+      <div class="phone"><img src="assets/1-entdecken.jpg" alt="Entdecken" loading="lazy"></div>
+      <div class="phone"><img src="assets/2-wein.jpg" alt="Weinseite mit Passung" loading="lazy"></div>
+    </div>
+
+    <section>
+      <p class="quote">„Wein ist Poesie in Flaschen.“<small>Robert Louis Stevenson</small></p>
+    </section>
+
+    <section class="split">
+      <div class="text">
+        <div class="eyebrow">Dein Gaumen</div>
+        <h2>Lerne deinen eigenen Geschmack kennen.</h2>
+        <p>Körper, Tannin, Säure, Süße, Alkohol und die Aromen, die du liebst: Mit jeder Bewertung zeichnet NOVAA dein Gaumen-Profil genauer. Für Rot, Weiß und Schaumwein getrennt – denn niemand mag alles auf dieselbe Weise.</p>
+        <p>Sterne genügen. Wer mag, beschreibt Struktur und Aromen – und schärft so den Blick auf das, was im Glas passiert.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/3-gaumen.jpg" alt="Gaumen-Profil" loading="lazy"></div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Entdecken</div>
+      <h2>Drei Wege durch die Welt der Weine.</h2>
+      <div class="cards">
+        <div class="card"><h3>Für dich sicher</h3><p>Weine, die mit großer Wahrscheinlichkeit zu deinem Gaumen passen.</p></div>
+        <div class="card"><h3>Nachbarn deines Geschmacks</h3><p>Verwandte Stile und Rebsorten, die du noch nicht kennst – ein Schritt zur Seite.</p></div>
+        <div class="card coral"><h3>Wagnis der Woche</h3><p>Ein bewusster Schritt hinaus. Manchmal liegt das Schönste dort, wo man nicht sucht.</p></div>
+      </div>
+      <p class="lead" style="margin-top:22px;text-align:left;max-width:none">Jede Empfehlung sagt dir, <em>warum</em> sie passt. Und Gaumen-Zwillinge zeigen dir, wie Menschen mit ähnlichem Geschmack einen Wein erlebt haben – anonym, ohne Profile, ohne Feed.</p>
+    </section>
+
+    <section class="split rev">
+      <div class="text">
+        <div class="eyebrow">Scannen</div>
+        <h2>Ein Blick aufs Etikett genügt.</h2>
+        <p>Halte die Kamera auf die Flasche. NOVAA liest das Etikett direkt auf deinem iPhone und sagt dir sofort, wie gut der Wein zu dir passt. Unbekannte Weine legst du in Sekunden selbst an.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/2-wein.jpg" alt="Weinseite" loading="lazy"></div>
+    </section>
+
+    <section class="split">
+      <div class="text">
+        <div class="eyebrow">Sammlung</div>
+        <h2>Der richtige Moment für jede Flasche.</h2>
+        <p>Verlauf, Merkliste, Album und Keller mit Trinkfenster: Du siehst, welcher Wein gerade auf dem Höhepunkt ist – und was noch Zeit braucht.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/4-sammlung.jpg" alt="Sammlung mit Keller" loading="lazy"></div>
+    </section>
+
+    <section class="faq">
+      <h2 style="text-align:center">Fragen</h2>
+      <details><summary>Kostet NOVAA etwas?</summary><p>Nein. Kein Abo, keine Werbung, keine Premium-Stufe.</p></details>
+      <details><summary>Brauche ich ein Konto?</summary><p>Nein. NOVAA funktioniert vollständig ohne Konto. Mit „Mit Apple anmelden“ synchronisierst du deine Sammlung zwischen Geräten.</p></details>
+      <details><summary>Was sind Gaumen-Zwillinge?</summary><p>Menschen, deren Geschmacksprofil deinem ähnelt. Du siehst nur ihren gemeinsamen Durchschnitt – und erst, wenn mindestens fünf von ihnen einen Wein bewertet haben.</p></details>
+      <details><summary>Mein Wein fehlt – was nun?</summary><p>Leg ihn direkt in der App an. Er ist sofort für dich nutzbar und erscheint für alle, sobald er geprüft ist.</p></details>
+      <details><summary>Was passiert mit meinen Fotos?</summary><p>Etiketten werden auf dem iPhone gelesen. Nur wenn du „Flaschenfotos teilen“ aktiviert lässt, wird die freigestellte Flasche – ohne Hintergrund, nie mit Personen – nach Prüfung als Produktbild genutzt.</p></details>
+    </section>
+
+    <section class="support">
+      <h2>Support</h2>
+      <p class="lead">Fragen, Feedback oder ein Konto-Anliegen? Schreib uns:<br><a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    </section>
+    <footer><a href="privacy.html">Datenschutz</a>· NOVAA richtet sich an Erwachsene im gesetzlichen Mindestalter. Genieße verantwortungsvoll. · © 2026 NOVAA</footer>
   </div>
 
+  <!-- ───────── EN ───────── -->
   <div data-lang="en">
-    <h1>Start fresh.</h1>
-    <div class="tag">Honest. At last.</div>
-    <p>No swiping. Nobody buys their way to the top. Just people who could genuinely fit —
-       an honest way to meet someone.</p>
-    <h2>Support</h2>
-    <p>Questions, feedback or an account request?<br>
-       Email us: <a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
-    <div class="links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms of Use</a>
+    <div class="hero">
+      <div class="orb big"></div>
+      <div class="eyebrow">For iPhone</div>
+      <h1>Every wine tells a story. Find the ones that move you.</h1>
+      <p class="lead">NOVAA learns how you taste with every glass – and guides you through the world of wine to the ones that truly speak to you. With an honest reason instead of strangers' stars.</p>
+      <span class="store">Coming soon to the App Store</span>
     </div>
-  </div>
+    <div class="phones">
+      <div class="phone"><img src="assets/3-gaumen.jpg" alt="Your palate profile" loading="lazy"></div>
+      <div class="phone"><img src="assets/1-entdecken.jpg" alt="Discover" loading="lazy"></div>
+      <div class="phone"><img src="assets/2-wein.jpg" alt="Wine page with match" loading="lazy"></div>
+    </div>
 
-  <footer>© 2026 NOVAA</footer>
-</main>
-<script>
-  function setLang(l){
-    document.documentElement.lang=l;
-    document.querySelectorAll('[data-lang]').forEach(e=>e.classList.toggle('on',e.dataset.lang===l));
-    document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));
-    try{localStorage.setItem('novaa-lang',l)}catch(e){}
-  }
-  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.set));
-  var saved=null; try{saved=localStorage.getItem('novaa-lang')}catch(e){}
-  setLang(saved||(navigator.language||'de').slice(0,2)==='en'?'en':'de');
-</script>
+    <section>
+      <p class="quote">“Wine is bottled poetry.”<small>Robert Louis Stevenson</small></p>
+    </section>
+
+    <section class="split">
+      <div class="text">
+        <div class="eyebrow">Your palate</div>
+        <h2>Get to know your own taste.</h2>
+        <p>Body, tannin, acidity, sweetness, alcohol and the aromas you love: every rating sharpens your palate profile – separately for red, white and sparkling, because nobody likes everything the same way.</p>
+        <p>Stars are enough. Describe structure and aromas if you like – and learn to notice what happens in the glass.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/3-gaumen.jpg" alt="Palate profile" loading="lazy"></div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Discover</div>
+      <h2>Three paths through the world of wine.</h2>
+      <div class="cards">
+        <div class="card"><h3>Safe for you</h3><p>Wines that will very likely suit your palate.</p></div>
+        <div class="card"><h3>Taste neighbors</h3><p>Related styles and grapes you haven't met yet – one step to the side.</p></div>
+        <div class="card coral"><h3>Venture of the week</h3><p>A deliberate step outside. Sometimes the most beautiful things are where you weren't looking.</p></div>
+      </div>
+      <p class="lead" style="margin-top:22px;text-align:left;max-width:none">Every recommendation tells you <em>why</em> it fits. And palate twins show how people with a similar taste experienced a wine – anonymously, without profiles or a feed.</p>
+    </section>
+
+    <section class="split rev">
+      <div class="text">
+        <div class="eyebrow">Scan</div>
+        <h2>One look at the label is enough.</h2>
+        <p>Point the camera at the bottle. NOVAA reads the label right on your iPhone and instantly tells you how well the wine suits you. Add unknown wines yourself in seconds.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/2-wein.jpg" alt="Wine page" loading="lazy"></div>
+    </section>
+
+    <section class="split">
+      <div class="text">
+        <div class="eyebrow">Collection</div>
+        <h2>The right moment for every bottle.</h2>
+        <p>History, wishlist, album and cellar with drinking windows: see which wine is at its peak right now – and which still needs time.</p>
+      </div>
+      <div class="phone" style="margin:0 auto"><img src="assets/4-sammlung.jpg" alt="Collection with cellar" loading="lazy"></div>
+    </section>
+
+    <section class="faq">
+      <h2 style="text-align:center">Questions</h2>
+      <details><summary>Does NOVAA cost anything?</summary><p>No. No subscription, no ads, no premium tier.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. NOVAA works fully without an account. Sign in with Apple to sync your collection across devices.</p></details>
+      <details><summary>What are palate twins?</summary><p>People whose taste profile resembles yours. You only see their combined average – and only once at least five of them have rated a wine.</p></details>
+      <details><summary>My wine is missing – what now?</summary><p>Add it right in the app. You can use it immediately; it appears for everyone once reviewed.</p></details>
+      <details><summary>What happens to my photos?</summary><p>Labels are read on your iPhone. Only if you keep “Share bottle photos” on, the cut-out bottle – without background, never with people – may be used as a product image after review.</p></details>
+    </section>
+
+    <section class="support">
+      <h2>Support</h2>
+      <p class="lead">Questions, feedback or an account request? Email us:<br><a href="mailto:blau.ton@icloud.com">blau.ton@icloud.com</a></p>
+    </section>
+    <footer><a href="privacy.html">Privacy</a>· NOVAA is intended for adults of legal drinking age. Enjoy responsibly. · © 2026 NOVAA</footer>
+  </div>
+</div>
+<script src="lang.js"></script>
 </body>
 </html>
