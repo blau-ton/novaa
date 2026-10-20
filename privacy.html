@@ -23,18 +23,25 @@
        liegen dann nur auf deinem iPhone. Den Wein-Katalog lädt die App von unserem Server; dabei werden keine
        persönlichen Daten übertragen.</p>
     <h2>Kamera</h2>
-    <p>Etiketten werden direkt auf dem iPhone gelesen (Apple Vision). Kamerabilder verlassen das Gerät nicht –
-       außer du teilst Flaschenfotos (siehe unten). Das Foto des Etiketts wird auf dem iPhone freigestellt,
-       gerade gezogen und nur dort gespeichert (Bereich „Etiketten“); es wird nie hochgeladen.</p>
+    <p>Etiketten werden direkt auf dem iPhone gelesen (Apple Vision). Das Foto eines Scans wird auf deinem iPhone
+       gespeichert (Verlauf). Es verlässt das Gerät nur, wenn du Etikettenfotos teilst oder ein unbekanntes Etikett
+       an NOVAA sendest (siehe unten).</p>
     <h2>Mit Konto („Mit Apple anmelden“)</h2>
     <p>Zur Synchronisierung speichern wir eine anonymisierte Apple-Kennung, optional Name und E-Mail
        (bzw. Apple-Relay-Adresse), dein Gaumen-Profil, Bewertungen und Verkostungsnotizen, gescannte Weine,
        Favoriten und Keller (Mengen, Lagerort, optional Preis) sowie von dir angelegte Weine.</p>
-    <h2>Flaschenfotos teilen</h2>
-    <p>Wenn „Flaschenfotos teilen“ aktiv ist (in den Einstellungen jederzeit abschaltbar), wird von einem Scan
-       nur die freigestellte Flasche ohne Hintergrund hochgeladen. Fotos, auf denen Personen erkannt werden,
-       werden nie geteilt. Nach einer Prüfung kann das Bild als Produktfoto des Weins für alle erscheinen –
-       ohne Bezug zu dir.</p>
+    <h2>Etikettenfotos teilen</h2>
+    <p>Wenn „Etikettenfotos teilen“ aktiv ist (nur mit Konto, im Konto jederzeit abschaltbar), wird das Foto eines
+       Scans so hochgeladen, wie du es aufgenommen hast (verkleinert). Fotos, auf denen Personen erkannt werden,
+       und Rückseiten mit Strichcode werden nie geteilt. Nach einer Prüfung durch uns kann das Foto als Bild des
+       Weins für alle erscheinen – ohne deinen Namen oder einen anderen Bezug zu dir. Nicht freigegebene Fotos
+       löschen wir.</p>
+    <h2>Unbekannte Etiketten senden</h2>
+    <p>Erkennt NOVAA einen Wein nicht, kannst du das Foto zusammen mit dem gelesenen Text und einem Strichcode an
+       uns senden (nur mit Konto). Wir nutzen es, um den Wein in den Katalog aufzunehmen.</p>
+    <h2>Von dir angelegte Weine</h2>
+    <p>Weine, die du mit Konto anlegst, prüfen wir. Nach der Freigabe stehen Name, Weingut, Herkunft und Stil
+       im Katalog für alle – ohne Bezug zu dir. Ohne Konto bleiben angelegte Weine nur auf deinem iPhone.</p>
     <h2>Produktfotos im Katalog</h2>
     <p>Flaschenfotos im Katalog stammen von Nutzern, die sie geteilt haben, oder – als Ersatz – aus
        Open Food Facts (Lizenz CC BY-SA 3.0, Quelle wird in der App angezeigt). Diese Fotos liegen auf unserem
@@ -49,7 +56,8 @@
        Grundlage deiner Einwilligung (Art. 6 (1) a), jederzeit widerrufbar. Keine Werbung, kein Tracking,
        kein Verkauf von Daten.</p>
     <h2>Verarbeiter</h2>
-    <p>Apple (Anmeldung) und Supabase (Datenbank und Speicher, Rechenzentrum in Zürich, Schweiz).</p>
+    <p>Apple (Anmeldung), Supabase (Datenbank, Rechenzentrum in Zürich, Schweiz) und Cloudflare (Speicher für
+       Fotos, Cloudflare R2).</p>
     <h2>Speicherdauer &amp; deine Rechte</h2>
     <p>Wir speichern deine Daten bis zur Löschung deines Kontos. Du hast das Recht auf Auskunft, Berichtigung,
        Löschung, Widerspruch und Datenübertragbarkeit. Du kannst dein Konto jederzeit in der App löschen
@@ -64,17 +72,24 @@
     <p>NOVAA works without signing in. Your ratings, tasting notes, collection and palate profile then stay on
        your iPhone only. The app downloads the wine catalog from our server; no personal data is sent.</p>
     <h2>Camera</h2>
-    <p>Labels are read on your iPhone (Apple Vision). Camera images never leave the device – unless you share
-       bottle photos (see below). The label photo is cropped and straightened on your iPhone and stored only
-       there (“Labels” section); it is never uploaded.</p>
+    <p>Labels are read on your iPhone (Apple Vision). The photo of a scan is stored on your iPhone (history). It
+       only leaves the device if you share label photos or send an unknown label to NOVAA (see below).</p>
     <h2>With an account (Sign in with Apple)</h2>
     <p>To sync, we store an anonymised Apple identifier, optionally your name and email (or Apple relay
        address), your palate profile, ratings and tasting notes, scanned wines, favorites and cellar (quantities,
        location, optional price) and wines you added.</p>
-    <h2>Sharing bottle photos</h2>
-    <p>If “Share bottle photos” is on (you can turn it off in settings at any time), only the cut-out bottle
-       without background is uploaded from a scan. Photos in which people are detected are never shared. After
-       review, the image may appear as the wine's product photo for everyone – without any link to you.</p>
+    <h2>Sharing label photos</h2>
+    <p>If “Share label photos” is on (account required, can be turned off under Account at any time), the photo
+       of a scan is uploaded as you took it (downsized). Photos in which people are detected and back labels with
+       a barcode are never shared. After our review, the photo may appear as the wine's picture for everyone –
+       without your name or any other link to you. Photos we don't approve are deleted.</p>
+    <h2>Sending unknown labels</h2>
+    <p>If NOVAA doesn't recognize a wine, you can send us the photo together with the text that was read and a
+       barcode (account required). We use it to add the wine to the catalog.</p>
+    <h2>Wines you add</h2>
+    <p>Wines you add with an account are reviewed by us. Once approved, name, producer, origin and style appear
+       in the catalog for everyone – without any link to you. Without an account, wines you add stay on your
+       iPhone only.</p>
     <h2>Product photos in the catalog</h2>
     <p>Bottle photos in the catalog come from users who shared them or – as a fallback – from Open Food Facts
        (licence CC BY-SA 3.0, credited in the app). These photos are hosted on our server; the app does not
@@ -87,7 +102,8 @@
     <p>Providing the app and its recommendations (contract, Art. 6 (1) b GDPR); sharing bottle photos based on
        your consent (Art. 6 (1) a), revocable at any time. No ads, no tracking, no sale of data.</p>
     <h2>Processors</h2>
-    <p>Apple (sign-in) and Supabase (database and storage, data center in Zurich, Switzerland).</p>
+    <p>Apple (sign-in), Supabase (database, data center in Zurich, Switzerland) and Cloudflare (photo storage,
+       Cloudflare R2).</p>
     <h2>Retention &amp; your rights</h2>
     <p>We keep your data until you delete your account. You have the right to access, rectification, erasure,
        objection and data portability. You can delete your account in the app at any time (Account → “Delete
