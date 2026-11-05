@@ -6,4 +6,5 @@ function setLang(l){
 }
 document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){setLang(b.dataset.set)}});
 var saved=null;try{saved=localStorage.getItem('novaa-lang')}catch(e){}
-setLang(saved||((navigator.language||'de').slice(0,2)==='de'?'de':'en'));
+var nav=(navigator.language||'de').slice(0,2);
+setLang(saved||(nav==='de'||nav==='fr'?nav:'en'));
